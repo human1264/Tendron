@@ -4,6 +4,11 @@ public class Cluster
 
     public Cluster(int len, int x, int y)
     {
-        // your code here
+        double ang = Math.random()*6.28;
+        for(int i = 0; i < NUM_STEMS + (int)(Math.random()*4); i++){
+          Tendril a = new Tendril(len, ang + (i * 0.9) + Math.random(), x,y);
+          a.show();
+        }
+        
     }
 }
