@@ -24,11 +24,11 @@ class Tendril
     stroke(133,51,97);
     int sx = myX;
     int sy = myY;
-    if(myNumSegments < 2){
+    if(myNumSegments < 10){
       for(int i = 0; i < myNumSegments; i++){
       int ex = sx + (int)(Math.cos(myAngle + Math.random()*1.8-0.9) * SEG_LENGTH);
       int ey = sy + (int)(Math.sin(myAngle + Math.random()*1.8-0.9) * SEG_LENGTH);
-      stroke(133 + ey,51 + ex,97 + ex);
+      stroke(133 + 3*ey,51 + ex/7,97 + ex/8);
       line(sx,sy,ex,ey);
       sx = ex;
       sy = ey;
@@ -38,7 +38,7 @@ class Tendril
     for(int i = 0; i < myNumSegments; i++){
       int ex = sx + (int)(Math.cos(myAngle + Math.random()*0.9-0.45) * SEG_LENGTH);
       int ey = sy + (int)(Math.sin(myAngle + Math.random()*0.9-0.45) * SEG_LENGTH);
-      stroke(133 + ex, 51 + ex,97 + ex);
+      stroke(133 + ex/7, 51 + ex/7,97 + 3*ex);
       line(sx,sy,ex,ey);
       sx = ex;
       sy = ey;
